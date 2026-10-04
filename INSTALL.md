@@ -22,7 +22,7 @@
 ### 2. 获取代码并安装依赖
 
 ```bash
-git clone https://github.com/<你的用户名>/ugos-pro-mcp.git
+git clone https://github.com/hongjiahao371-pixel/ugos-pro-mcp.git
 cd ugos-pro-mcp
 pip install -r requirements.txt
 ```
