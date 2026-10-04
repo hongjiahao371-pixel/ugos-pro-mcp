@@ -1,0 +1,19 @@
+services:
+  ugos-pro-mcp:
+    build: .
+    container_name: ugos-pro-mcp
+    ports:
+      - "8000:8000"
+    environment:
+      # NAS 连接信息（必填）
+      UGOS_HOST: "192.168.x.x"
+      UGOS_USER: "your_account"
+      UGOS_PASSWORD: "your_password"
+      UGOS_PORT: "9443"
+      # 远程模式下建议只读运行；确认风险后改 "1" 开启写入工具
+      UGOS_ALLOW_WRITE: "0"
+      # SSE 远程模式
+      UGOS_MCP_TRANSPORT: "sse"
+      UGOS_MCP_HOST: "0.0.0.0"
+      UGOS_MCP_PORT: "8000"
+    restart: unless-stopped
